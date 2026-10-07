@@ -6,34 +6,27 @@
 - Môn học: Kiểm thử phần mềm
 - Công cụ: Postman
 - API sử dụng: JSONPlaceholder
-- GitHub Repository: postman-api-testing
-
----
 
 ## 2. Mục tiêu
 
 Mục tiêu của bài tập là thực hành kiểm thử REST API bằng công cụ Postman.
 
-Các chức năng API được kiểm thử gồm:
+Các chức năng được kiểm thử:
 
 - GET danh sách người dùng
-- GET thông tin người dùng theo ID
-- Kiểm tra trường hợp người dùng không tồn tại
+- GET người dùng theo ID
+- Kiểm tra người dùng không tồn tại
 - POST tạo người dùng
 - PUT cập nhật người dùng
 - DELETE người dùng
 
----
-
 ## 3. API sử dụng
 
-API được sử dụng trong bài:
+API:
 
 https://jsonplaceholder.typicode.com
 
-JSONPlaceholder là một REST API giả lập được sử dụng để thực hành và kiểm thử API.
-
----
+JSONPlaceholder là REST API giả lập được sử dụng để thực hành và kiểm thử API.
 
 ## 4. Danh sách Test Case
 
@@ -46,19 +39,15 @@ JSONPlaceholder là một REST API giả lập được sử dụng để thực
 | TC05 - PUT Update User | PUT | /users/1 | 200 OK |
 | TC06 - DELETE User | DELETE | /users/1 | 200 OK |
 
----
+## 5. Chi tiết kiểm thử
 
-# 5. Chi tiết kiểm thử
-
-## TC01 - GET Users
+### TC01 - GET Users
 
 **Mục đích:** Kiểm tra API lấy danh sách người dùng.
 
 **Phương thức:** GET
 
-**URL:**
-
-https://jsonplaceholder.typicode.com/users
+**URL:** https://jsonplaceholder.typicode.com/users
 
 **Kết quả mong đợi:** HTTP 200 OK.
 
@@ -67,7 +56,7 @@ https://jsonplaceholder.typicode.com/users
 - Kiểm tra mã trạng thái trả về là 200.
 - Kiểm tra response có định dạng JSON.
 - Kiểm tra response chứa danh sách người dùng.
-- Kiểm tra người dùng đầu tiên có các trường `id`, `name`, `email`.
+- Kiểm tra người dùng đầu tiên có các trường id, name, email.
 
 **Kết quả:** PASS
 
@@ -75,15 +64,13 @@ https://jsonplaceholder.typicode.com/users
 
 ---
 
-## TC02 - GET User By ID
+### TC02 - GET User By ID
 
 **Mục đích:** Kiểm tra API lấy thông tin người dùng theo ID.
 
 **Phương thức:** GET
 
-**URL:**
-
-https://jsonplaceholder.typicode.com/users/1
+**URL:** https://jsonplaceholder.typicode.com/users/1
 
 **Kết quả mong đợi:** HTTP 200 OK.
 
@@ -92,7 +79,7 @@ https://jsonplaceholder.typicode.com/users/1
 - Kiểm tra mã trạng thái trả về là 200.
 - Kiểm tra response có định dạng JSON.
 - Kiểm tra ID người dùng trả về là 1.
-- Kiểm tra người dùng có các trường `id`, `name`, `email`.
+- Kiểm tra người dùng có các trường id, name, email.
 
 **Kết quả:** PASS
 
@@ -100,15 +87,13 @@ https://jsonplaceholder.typicode.com/users/1
 
 ---
 
-## TC03 - GET User Not Found
+### TC03 - GET User Not Found
 
 **Mục đích:** Kiểm tra trường hợp người dùng không tồn tại.
 
 **Phương thức:** GET
 
-**URL:**
-
-https://jsonplaceholder.typicode.com/users/999
+**URL:** https://jsonplaceholder.typicode.com/users/999
 
 **Kết quả mong đợi:** HTTP 404 Not Found.
 
@@ -124,105 +109,112 @@ https://jsonplaceholder.typicode.com/users/999
 
 ---
 
-## TC04 - POST Create User
+### TC04 - POST Create User
 
 **Mục đích:** Kiểm tra chức năng tạo người dùng mới.
 
 **Phương thức:** POST
 
-**URL:**
-
-https://jsonplaceholder.typicode.com/users
+**URL:** https://jsonplaceholder.typicode.com/users
 
 **Dữ liệu gửi lên:**
 
-```json
-{
-    "name": "Nguyen The Cuong",
-    "username": "thecuong",
-    "email": "cuong@example.com"
-}
+name: Nguyen The Cuong
 
-Kết quả mong đợi: HTTP 201 Created.
+username: thecuong
 
-Nội dung kiểm tra:
+email: cuong@example.com
 
-Kiểm tra mã trạng thái trả về là 201.
-Kiểm tra response có định dạng JSON.
-Kiểm tra response có trường id.
-Kiểm tra thông tin người dùng được tạo chính xác.
+**Kết quả mong đợi:** HTTP 201 Created.
 
-Kết quả: PASS
+**Nội dung kiểm tra:**
 
-TC05 - PUT Update User
+- Kiểm tra mã trạng thái trả về là 201.
+- Kiểm tra response có định dạng JSON.
+- Kiểm tra response có trường id.
+- Kiểm tra thông tin người dùng được tạo chính xác.
 
-Mục đích: Kiểm tra chức năng cập nhật thông tin người dùng.
+**Kết quả:** PASS
 
-Phương thức: PUT
+![TC04](images/TC04.png)
 
-URL:
+---
 
-https://jsonplaceholder.typicode.com/users/1
+### TC05 - PUT Update User
 
-Dữ liệu gửi lên:
+**Mục đích:** Kiểm tra chức năng cập nhật thông tin người dùng.
 
-{
-    "id": 1,
-    "name": "Nguyen The Cuong Updated",
-    "username": "thecuong_updated",
-    "email": "cuong.updated@example.com"
-}
+**Phương thức:** PUT
 
-Kết quả mong đợi: HTTP 200 OK.
+**URL:** https://jsonplaceholder.typicode.com/users/1
 
-Nội dung kiểm tra:
+**Dữ liệu gửi lên:**
 
-Kiểm tra mã trạng thái trả về là 200.
-Kiểm tra response có định dạng JSON.
-Kiểm tra ID người dùng là 1.
-Kiểm tra thông tin người dùng đã được cập nhật chính xác.
+id: 1
 
-Kết quả: PASS
+name: Nguyen The Cuong Updated
 
-TC06 - DELETE User
+username: thecuong_updated
 
-Mục đích: Kiểm tra chức năng xóa người dùng.
+email: cuong.updated@example.com
 
-Phương thức: DELETE
+**Kết quả mong đợi:** HTTP 200 OK.
 
-URL:
+**Nội dung kiểm tra:**
 
-https://jsonplaceholder.typicode.com/users/1
+- Kiểm tra mã trạng thái trả về là 200.
+- Kiểm tra response có định dạng JSON.
+- Kiểm tra ID người dùng là 1.
+- Kiểm tra thông tin người dùng đã được cập nhật chính xác.
 
-Kết quả mong đợi: HTTP 200 OK.
+**Kết quả:** PASS
 
-Response:
+![TC05](images/TC05.png)
 
-{}
+---
 
-Nội dung kiểm tra:
+### TC06 - DELETE User
 
-Kiểm tra mã trạng thái trả về là 200.
-Kiểm tra response có định dạng JSON.
-Kiểm tra response trả về object rỗng.
+**Mục đích:** Kiểm tra chức năng xóa người dùng.
 
-Kết quả: PASS
+**Phương thức:** DELETE
 
-6. Tổng kết kết quả kiểm thử
-Test Case	Kết quả
-TC01 - GET Users	PASS
-TC02 - GET User By ID	PASS
-TC03 - GET User Not Found	PASS
-TC04 - POST Create User	PASS
-TC05 - PUT Update User	PASS
-TC06 - DELETE User	PASS
-Tổng kết
+**URL:** https://jsonplaceholder.typicode.com/users/1
 
-6/6 Test Case PASS
+**Kết quả mong đợi:** HTTP 200 OK.
 
-Tỷ lệ Test Case đạt: 100%
+**Response:** Object rỗng.
 
-7. Kết luận
+**Nội dung kiểm tra:**
+
+- Kiểm tra mã trạng thái trả về là 200.
+- Kiểm tra response có định dạng JSON.
+- Kiểm tra response trả về object rỗng.
+
+**Kết quả:** PASS
+
+![TC06](images/TC06.png)
+
+---
+
+## 6. Tổng kết kết quả kiểm thử
+
+| Test Case | Kết quả |
+|---|---|
+| TC01 - GET Users | PASS |
+| TC02 - GET User By ID | PASS |
+| TC03 - GET User Not Found | PASS |
+| TC04 - POST Create User | PASS |
+| TC05 - PUT Update User | PASS |
+| TC06 - DELETE User | PASS |
+
+### Tổng kết
+
+**6/6 Test Case PASS**
+
+**Tỷ lệ Test Case đạt: 100%**
+
+## 7. Kết luận
 
 Qua bài thực hành, em đã sử dụng Postman để thực hiện kiểm thử REST API với các phương thức GET, POST, PUT và DELETE.
 
@@ -230,7 +222,8 @@ Các Test Case bao gồm cả trường hợp thành công và trường hợp l
 
 Kết quả cho thấy tất cả 6 Test Case đều đạt yêu cầu.
 
-8. Tài liệu tham khảo
-Postman: https://www.postman.com/
-JSONPlaceholder: https://jsonplaceholder.typicode.com/
-Video hướng dẫn Postman: https://www.youtube.com/watch?v=MFxk5BZulVU
+## 8. Tài liệu tham khảo
+
+- Postman: https://www.postman.com/
+- JSONPlaceholder: https://jsonplaceholder.typicode.com/
+- Video hướng dẫn Postman: https://www.youtube.com/watch?v=MFxk5BZulVU
