@@ -1,13 +1,12 @@
-# Postman API Testing
+# Kiểm thử API bằng Postman
 
-## 1. Student Information
+## 1. Thông tin sinh viên
 
 - Họ và tên: Nguyễn Thế Cường
-- Môn học: Đánh giá và kiểm định chất lượng phần mềm
+- Môn học: Kiểm thử phần mềm
 - Công cụ: Postman
 - API sử dụng: JSONPlaceholder
 - GitHub Repository: postman-api-testing
-
 
 ---
 
@@ -36,9 +35,9 @@ JSONPlaceholder là một REST API giả lập được sử dụng để thực
 
 ---
 
-## 4. Test Cases
+## 4. Danh sách Test Case
 
-| Test Case | Method | Endpoint | Expected Result |
+| Test Case | Phương thức | Endpoint | Kết quả mong đợi |
 |---|---|---|---|
 | TC01 - GET Users | GET | /users | 200 OK |
 | TC02 - GET User By ID | GET | /users/1 | 200 OK |
@@ -48,6 +47,7 @@ JSONPlaceholder là một REST API giả lập được sử dụng để thực
 | TC06 - DELETE User | DELETE | /users/1 | 200 OK |
 
 ---
+
 # 5. Chi tiết kiểm thử
 
 ## TC01 - GET Users
@@ -142,6 +142,8 @@ https://jsonplaceholder.typicode.com/users
     "username": "thecuong",
     "email": "cuong@example.com"
 }
+
+
 Kết quả mong đợi: HTTP 201 Created.
 
 Nội dung kiểm tra:
