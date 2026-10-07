@@ -60,7 +60,7 @@ JSONPlaceholder là REST API giả lập được sử dụng để thực hành
 
 **Kết quả:** PASS
 
-![TC01](images/TC01.png)
+![TC01](TC01.png)
 
 ---
 
@@ -83,7 +83,7 @@ JSONPlaceholder là REST API giả lập được sử dụng để thực hành
 
 **Kết quả:** PASS
 
-![TC02](images/TC02.png)
+![TC02](TC02.png)
 
 ---
 
@@ -105,7 +105,7 @@ JSONPlaceholder là REST API giả lập được sử dụng để thực hành
 
 **Kết quả:** PASS
 
-![TC03](images/TC03.png)
+![TC03](TC03.png)
 
 ---
 
@@ -136,7 +136,7 @@ email: cuong@example.com
 
 **Kết quả:** PASS
 
-![TC04](images/TC04.png)
+![TC04](TC04.png)
 
 ---
 
@@ -169,7 +169,7 @@ email: cuong.updated@example.com
 
 **Kết quả:** PASS
 
-![TC05](images/TC05.png)
+![TC05](TC05.png)
 
 ---
 
@@ -193,7 +193,7 @@ email: cuong.updated@example.com
 
 **Kết quả:** PASS
 
-![TC06](images/TC06.png)
+![TC06](TC06.png)
 
 ---
 
