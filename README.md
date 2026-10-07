@@ -143,7 +143,6 @@ https://jsonplaceholder.typicode.com/users
     "email": "cuong@example.com"
 }
 
-
 Kết quả mong đợi: HTTP 201 Created.
 
 Nội dung kiểm tra:
@@ -221,15 +220,15 @@ Tổng kết
 
 6/6 Test Case PASS
 
-Tỷ lệ Test Case đạt:
-
-100%
+Tỷ lệ Test Case đạt: 100%
 
 7. Kết luận
 
 Qua bài thực hành, em đã sử dụng Postman để thực hiện kiểm thử REST API với các phương thức GET, POST, PUT và DELETE.
 
-Các Test Case bao gồm cả trường hợp thành công và trường hợp lỗi 404. Kết quả cho thấy tất cả 6 Test Case đều đạt yêu cầu.
+Các Test Case bao gồm cả trường hợp thành công và trường hợp lỗi 404.
+
+Kết quả cho thấy tất cả 6 Test Case đều đạt yêu cầu.
 
 8. Tài liệu tham khảo
 Postman: https://www.postman.com/
